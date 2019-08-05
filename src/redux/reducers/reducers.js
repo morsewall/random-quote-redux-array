@@ -1,4 +1,4 @@
-import "./src/redux/actions";
+import { NEW_QUOTE } from "./src/redux/constants";
 import { getRandomQuote } from "./src/js/js-modules/getRandomQuote.js";
 
 //defining initial state
