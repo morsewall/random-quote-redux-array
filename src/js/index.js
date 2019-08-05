@@ -1,8 +1,8 @@
 "use strict";
 
-import { newQuoteActionCreator } from "./src/redux/actions";
-import { getNextQuoteReducer } from "./src/redux/reducers";
-import { getTwitterUrl } from "./src/js/js-modules/getTwitterUrl.js";
+import newQuoteActionCreator from "./src/redux/actions";
+import getNextQuoteReducer from "./src/redux/reducers";
+import getTwitterUrl from "./src/js/js-modules/getTwitterUrl.js";
 
 const Redux = window.Redux;
 
