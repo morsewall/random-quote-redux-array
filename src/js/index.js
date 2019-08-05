@@ -1,12 +1,9 @@
 "use strict";
 
-import actions from "./src/redux/actions";
-import constants from "./src/redux/constants";
-import reducers from "./src/redux/reducers";
-import { getRandomQuote } from "./src/js/js-modules/getRandomQuote.js";
+import "./src/redux/actions";
+import "./src/redux/constants";
+import "./src/redux/reducers";
 import { getTwitterUrl } from "./src/js/js-modules/getTwitterUrl.js";
-
-export default { actions, constants, reducers, getRandomQuote };
 
 const Redux = window.Redux;
 
