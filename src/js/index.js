@@ -5,7 +5,6 @@ import * as constants from "./src/redux/constants";
 import reducers from "./src/redux/reducers";
 import { getRandomQuote } from "./src/js/js-modules/getRandomQuote.js";
 import { getTwitterUrl } from "./src/js/js-modules/getTwitterUrl.js";
-import "https://unpkg.com/redux@4.0.4/dist/redux.js";
 
 export default { actions, constants, reducers, getRandomQuote };
 
