@@ -1,12 +1,14 @@
 "use strict";
 
-import * as actions from "./src/redux/actions";
-import * as constants from "./src/redux/constants";
+import actions from "./src/redux/actions";
+import constants from "./src/redux/constants";
 import reducers from "./src/redux/reducers";
 import { getRandomQuote } from "./src/js/js-modules/getRandomQuote.js";
 import { getTwitterUrl } from "./src/js/js-modules/getTwitterUrl.js";
 
 export default { actions, constants, reducers, getRandomQuote };
+
+const Redux = window.Redux;
 
 //creating the Redux store
 const store = Redux.createStore(
