@@ -1,5 +1,5 @@
 //defining function that generates a Twitter URL (for Twitter intent), making it a JS function/module
-export const getTwitterUrl = quoteObject => {
+export default (getTwitterUrl = quoteObject => {
   //truncating quote text in case full tweet gets to be over 280 characters
   let quoteTextElem = quoteObject.quoteText;
   let quoteAuthorElem = " - " + quoteObject.quoteAuthor;
@@ -18,4 +18,4 @@ export const getTwitterUrl = quoteObject => {
     //generate url available for Twitter intent and inject url on HTML
     tweetButton.href = "https://twitter.com/intent/tweet?text=" + contentQuote;
   }
-};
+});

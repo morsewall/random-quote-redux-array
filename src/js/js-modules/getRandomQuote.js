@@ -1,5 +1,5 @@
 //defining function that accesses random quote from quotes array
-export const getRandomQuote = () => {
+export default (getRandomQuote = () => {
   //defining an array for the quotes, wrapping it inside a JS function/module
   const quotes = [
     {
@@ -98,4 +98,4 @@ export const getRandomQuote = () => {
     }
   ];
   return quotes[Math.floor(Math.random() * quotes.length)];
-};
+});
