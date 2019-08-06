@@ -1,4 +1,4 @@
-//defining function that accesses random quote from quotes array
+//defining function that accesses random quote from quotes array, making it a JS function/module
 const getRandomQuote = () => {
   //defining an array for the quotes, wrapping it inside a JS function/module
   const quotes = [

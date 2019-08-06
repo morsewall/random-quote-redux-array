@@ -4,13 +4,14 @@ import newQuoteActionCreator from "../redux/actions/actions.js";
 import getNextQuoteReducer from "../redux/reducers/reducers.js";
 import getTwitterUrl from "./js-modules/getTwitterUrl.js";
 
+// The UMD build makes Redux available as a window.Redux global variable
 const Redux = window.Redux;
 
 //creating the Redux store
 const store = Redux.createStore(
   getNextQuoteReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+); //second argument is to add Chrome's Redux DevTool's extension https://github.com/zalmoxisus/redux-devtools-extension that allows me to go back in the state history
 
 //defining UI elements
 const newQuoteButton = document.getElementById("new-quote");
@@ -25,6 +26,7 @@ store.subscribe(() => {
   quoteTextContent.innerHTML = state.data.quoteText;
   //inject author on HTML
   quoteAuthorContent.innerHTML = "- " + state.data.quoteAuthor;
+  //calling the JS module that generates a Twitter url for Twitter intent
   getTwitterUrl(state.data);
 });
 

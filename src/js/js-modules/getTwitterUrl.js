@@ -1,4 +1,4 @@
-//defining function that generates a Twitter URL (for Twitter intent), making it a JS function/module
+//defining function that generates a Twitter URL (for Twitter intent) and inject url on HTML, making it a JS function/module
 const getTwitterUrl = quoteObject => {
   //truncating quote text in case full tweet gets to be over 280 characters
   let quoteTextElem = quoteObject.quoteText;
