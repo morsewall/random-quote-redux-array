@@ -10,4 +10,4 @@ const newQuoteActionCreator = () => {
   };
 };
 
-export default quoteObject;
+export default newQuoteActionCreator;
