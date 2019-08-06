@@ -2,10 +2,10 @@ import NEW_QUOTE from "../constants/constants.js";
 import getRandomQuote from "../../js/js-modules/getRandomQuote.js";
 
 //defining initial state
-export default defaultQuote = getRandomQuote();
+const defaultQuote = getRandomQuote();
 
 //defining reducer functions to allow the Redux store to know how to respond to the action created
-export default getNextQuoteReducer = (state = defaultQuote, action) => {
+export default (getNextQuoteReducer = (state = defaultQuote, action) => {
   switch (action.type) {
     case NEW_QUOTE:
       return {
@@ -15,4 +15,4 @@ export default getNextQuoteReducer = (state = defaultQuote, action) => {
     default:
       return state;
   }
-};
+});
