@@ -42,3 +42,5 @@ document.addEventListener("DOMContentLoaded", () => {
   quoteAuthorContent.innerHTML = "- " + state.quoteAuthor;
   getTwitterUrl(state);
 });
+
+export default tweetButton;

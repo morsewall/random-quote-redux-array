@@ -4,7 +4,7 @@ import getRandomQuote from "../../js/js-modules/getRandomQuote.js";
 //defining initial state
 const defaultQuote = getRandomQuote();
 
-//defining reducer functions to allow the Redux store to know how to respond to the action created
+//defining reducer function to allow the Redux store to know how to respond to the action created
 const getNextQuoteReducer = (state = defaultQuote, action) => {
   switch (action.type) {
     case NEW_QUOTE:
