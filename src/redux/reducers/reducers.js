@@ -1,4 +1,4 @@
-import NEW_QUOTE from "../constants/constants.js";
+import { NEW_QUOTE } from "../constants/constants.js";
 import getRandomQuote from "../../js/js-modules/getRandomQuote.js";
 
 //defining initial state
