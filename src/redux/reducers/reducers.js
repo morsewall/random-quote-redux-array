@@ -1,5 +1,5 @@
-import NEW_QUOTE from "/src/redux/constants/constants.js";
-import getRandomQuote from "/src/js/js-modules/getRandomQuote.js";
+import NEW_QUOTE from "../constants/constants.js";
+import getRandomQuote from "../../js/js-modules/getRandomQuote.js";
 
 //defining initial state
 export const defaultQuote = getRandomQuote();
