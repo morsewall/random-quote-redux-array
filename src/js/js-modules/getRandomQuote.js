@@ -97,6 +97,7 @@ const getRandomQuote = () => {
       quoteAuthor: "@GretaThunberg"
     }
   ];
+  //access random quote from quote array
   return quotes[Math.floor(Math.random() * quotes.length)];
 };
 
