@@ -7,7 +7,7 @@ import getTwitterUrl from "./js-modules/getTwitterUrl.js";
 // The UMD build makes Redux available as a window.Redux global variable
 const Redux = window.Redux;
 
-//creating the Redux store
+//creating the Redux store. This is where the state lives.
 const store = Redux.createStore(
   getNextQuoteReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -21,6 +21,7 @@ const tweetButton = document.getElementById("tweet-quote");
 
 //creating store listener function that is called whenever an action is dispatched to the store. The getState() method retrieves the current state held in the Redux store
 store.subscribe(() => {
+  //access the state of the app
   const state = store.getState();
   //inject random quote on HTML
   quoteTextContent.innerHTML = state.data.quoteText;
@@ -30,16 +31,20 @@ store.subscribe(() => {
   getTwitterUrl(state.data);
 });
 
-//creating UI listeners. Dispatching actions (via the action creators that return a "type" to the reducer) to the redux store. When a new state is set in the Redux store, the store listeners will be retrienving the current state held in the Redux store
+//creating UI listeners. Dispatching actions (via the action creators that return a "type" to the reducer) to the redux store. When a new state is set in the Redux store, the store listeners will be retrieving the current state held in the Redux store
 newQuoteButton.addEventListener("click", () => {
   store.dispatch(newQuoteActionCreator());
 });
 
 //getting initial state, a reset state as the DOM is loaded.
 document.addEventListener("DOMContentLoaded", () => {
+  //access the state of the app
   const state = store.getState();
+  //inject random quote on HTML
   quoteTextContent.innerHTML = state.quoteText;
+  //inject author on HTML
   quoteAuthorContent.innerHTML = "- " + state.quoteAuthor;
+  //calling the JS module that generates a Twitter url for Twitter intent
   getTwitterUrl(state);
 });
 
